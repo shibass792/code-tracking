@@ -4,10 +4,10 @@
 
 | Stat                   | Value                                                             |
 | ---------------------- | ----------------------------------------------------------------- |
-| **Lines Added** (➕)   | 2740                                          |
-| **Lines Removed** (➖) | 62                                        |
-| **Net Change** (↕)    | 2678                |
-| **Active Time** (⌚)   | 122 minutes |
+| **Lines Added** (➕)   | 2778                                          |
+| **Lines Removed** (➖) | 72                                        |
+| **Net Change** (↕)    | 2706                |
+| **Active Time** (⌚)   | 124 minutes |
 
 
 ## Modified Files
@@ -19,6 +19,7 @@
 - **SHIBASS-CUBASE-MIDI-WORKER.vmx** (+167, -40)
 - **SHIBASS-UBUNTU.vmx** (+31, -0)
 - **start_services.bat** (+6, -0)
+- **test_guest_users.py** (+38, -10)
 
 ## Visualizations
 
@@ -29,7 +30,7 @@ pie showData
 title Lines changed by file type
 ".log" : 378
 ".ps1" : 654
-".py" : 1526
+".py" : 1574
 ".vmx" : 238
 ".bat" : 6
 ```
@@ -46,8 +47,8 @@ title Coding activity by hour (count of changes)
 "13h" : 7
 "14h" : 8
 "15h" : 4
-"16h" : 2
+"16h" : 5
 ```
 
 
-> **Last Updated:** 7/8/2026, 4:53:01 PM
+> **Last Updated:** 7/8/2026, 4:58:01 PM

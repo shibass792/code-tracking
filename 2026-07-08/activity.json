@@ -95,9 +95,9 @@
       "averageChangeSize": 708
     },
     "twenty_versions_aminor": {
-      "totalLinesAdded": 2740,
-      "totalLinesRemoved": 62,
-      "totalActiveTime": 122,
+      "totalLinesAdded": 2778,
+      "totalLinesRemoved": 72,
+      "totalActiveTime": 124,
       "files": {
         "h:\\shibass-ai\\logs\\cubase_extractor.log": [
           {
@@ -1807,6 +1807,50 @@
             },
             "duration": 0,
             "language": "bat"
+          }
+        ],
+        "c:\\Users\\shibass\\.gemini\\antigravity-ide\\scratch\\test_guest_users.py": [
+          {
+            "timestamp": "2026-07-08T13:57:27.045Z",
+            "fileName": "c:\\Users\\shibass\\.gemini\\antigravity-ide\\scratch\\test_guest_users.py",
+            "fileType": ".py",
+            "linesAdded": 37,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 0,
+            "language": "py"
+          },
+          {
+            "timestamp": "2026-07-08T13:57:53.297Z",
+            "fileName": "c:\\Users\\shibass\\.gemini\\antigravity-ide\\scratch\\test_guest_users.py",
+            "fileType": ".py",
+            "linesAdded": 1,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "py"
+          },
+          {
+            "timestamp": "2026-07-08T13:58:01.269Z",
+            "fileName": "c:\\Users\\shibass\\.gemini\\antigravity-ide\\scratch\\test_guest_users.py",
+            "fileType": ".py",
+            "linesAdded": 0,
+            "linesRemoved": 10,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "py"
           }
         ]
       },
