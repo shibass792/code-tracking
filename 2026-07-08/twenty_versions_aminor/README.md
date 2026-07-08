@@ -4,10 +4,10 @@
 
 | Stat                   | Value                                                             |
 | ---------------------- | ----------------------------------------------------------------- |
-| **Lines Added** (➕)   | 5644                                          |
-| **Lines Removed** (➖) | 86                                        |
-| **Net Change** (↕)    | 5558                |
-| **Active Time** (⌚)   | 189 minutes |
+| **Lines Added** (➕)   | 5742                                          |
+| **Lines Removed** (➖) | 88                                        |
+| **Net Change** (↕)    | 5654                |
+| **Active Time** (⌚)   | 195 minutes |
 
 
 ## Modified Files
@@ -43,7 +43,9 @@
 - **list_guest_shibass_ai_v2.py** (+51, -0)
 - **run_check_node_local.py** (+40, -0)
 - **check_node_local.py** (+65, -0)
-- **check_node_guest.ps1** (+13, -0)
+- **check_node_guest.ps1** (+13, -2)
+- **START-EVERYTHING.cmd** (+40, -0)
+- **START-SB-STACK.ps1** (+58, -0)
 
 ## Visualizations
 
@@ -53,11 +55,11 @@
 pie showData
 title Lines changed by file type
 ".log" : 378
-".ps1" : 667
+".ps1" : 727
 ".py" : 4417
 ".vmx" : 238
 ".bat" : 6
-".cmd" : 24
+".cmd" : 64
 ```
 
 ### By Hour (Estimated Activity Count)
@@ -78,8 +80,8 @@ title Coding activity by hour (count of changes)
 "19h" : 19
 "20h" : 10
 "21h" : 9
-"22h" : 10
+"22h" : 13
 ```
 
 
-> **Last Updated:** 7/8/2026, 10:28:01 PM
+> **Last Updated:** 7/8/2026, 10:33:01 PM

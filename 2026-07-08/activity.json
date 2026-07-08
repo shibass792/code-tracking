@@ -95,9 +95,9 @@
       "averageChangeSize": 708
     },
     "twenty_versions_aminor": {
-      "totalLinesAdded": 5644,
-      "totalLinesRemoved": 86,
-      "totalActiveTime": 189,
+      "totalLinesAdded": 5742,
+      "totalLinesRemoved": 88,
+      "totalActiveTime": 195,
       "files": {
         "h:\\shibass-ai\\logs\\cubase_extractor.log": [
           {
@@ -2626,6 +2626,52 @@
               "removed": []
             },
             "duration": 2,
+            "language": "ps1"
+          },
+          {
+            "timestamp": "2026-07-08T19:32:31.401Z",
+            "fileName": "c:\\Users\\shibass\\.gemini\\antigravity-ide\\scratch\\check_node_guest.ps1",
+            "fileType": ".ps1",
+            "linesAdded": 0,
+            "linesRemoved": 2,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "ps1"
+          }
+        ],
+        "h:\\shibass-ai\\START-EVERYTHING.cmd": [
+          {
+            "timestamp": "2026-07-08T19:31:01.375Z",
+            "fileName": "h:\\shibass-ai\\START-EVERYTHING.cmd",
+            "fileType": ".cmd",
+            "linesAdded": 40,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 4,
+            "language": "cmd"
+          }
+        ],
+        "h:\\shibass-ai\\START-SB-STACK.ps1": [
+          {
+            "timestamp": "2026-07-08T19:31:42.441Z",
+            "fileName": "h:\\shibass-ai\\START-SB-STACK.ps1",
+            "fileType": ".ps1",
+            "linesAdded": 58,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
             "language": "ps1"
           }
         ]
