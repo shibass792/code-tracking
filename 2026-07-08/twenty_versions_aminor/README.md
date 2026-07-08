@@ -4,10 +4,10 @@
 
 | Stat                   | Value                                                             |
 | ---------------------- | ----------------------------------------------------------------- |
-| **Lines Added** (➕)   | 4047                                          |
+| **Lines Added** (➕)   | 4141                                          |
 | **Lines Removed** (➖) | 73                                        |
-| **Net Change** (↕)    | 3974                |
-| **Active Time** (⌚)   | 130 minutes |
+| **Net Change** (↕)    | 4068                |
+| **Active Time** (⌚)   | 136 minutes |
 
 
 ## Modified Files
@@ -22,7 +22,7 @@
 - **test_guest_users.py** (+38, -10)
 - **run_and_copy.py** (+49, -1)
 - **run.cmd** (+24, -0)
-- **gui.py** (+540, -0)
+- **gui.py** (+634, -0)
 - **run_batch.py** (+112, -0)
 - **reports.py** (+542, -0)
 
@@ -35,7 +35,7 @@ pie showData
 title Lines changed by file type
 ".log" : 378
 ".ps1" : 654
-".py" : 2820
+".py" : 2914
 ".vmx" : 238
 ".bat" : 6
 ".cmd" : 24
@@ -56,8 +56,8 @@ title Coding activity by hour (count of changes)
 "16h" : 5
 "17h" : 1
 "18h" : 3
-"19h" : 6
+"19h" : 9
 ```
 
 
-> **Last Updated:** 7/8/2026, 7:23:01 PM
+> **Last Updated:** 7/8/2026, 7:28:01 PM
