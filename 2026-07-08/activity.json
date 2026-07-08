@@ -95,7 +95,7 @@
       "averageChangeSize": 708
     },
     "twenty_versions_aminor": {
-      "totalLinesAdded": 5884,
+      "totalLinesAdded": 5890,
       "totalLinesRemoved": 90,
       "totalActiveTime": 201,
       "files": {
@@ -2656,6 +2656,20 @@
               "removed": []
             },
             "duration": 4,
+            "language": "cmd"
+          },
+          {
+            "timestamp": "2026-07-08T19:41:03.426Z",
+            "fileName": "h:\\shibass-ai\\START-EVERYTHING.cmd",
+            "fileType": ".cmd",
+            "linesAdded": 6,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 0,
             "language": "cmd"
           }
         ],
