@@ -95,9 +95,9 @@
       "averageChangeSize": 708
     },
     "twenty_versions_aminor": {
-      "totalLinesAdded": 2536,
+      "totalLinesAdded": 2624,
       "totalLinesRemoved": 22,
-      "totalActiveTime": 112,
+      "totalActiveTime": 116,
       "files": {
         "h:\\shibass-ai\\logs\\cubase_extractor.log": [
           {
@@ -1605,6 +1605,78 @@
             },
             "duration": 0,
             "language": "py"
+          }
+        ],
+        "h:\\shibass-ai\\VM\\SHIBASS-CUBASE-MIDI-WORKER\\SHIBASS-CUBASE-MIDI-WORKER.vmx": [
+          {
+            "timestamp": "2026-07-08T11:11:53.907Z",
+            "fileName": "h:\\shibass-ai\\VM\\SHIBASS-CUBASE-MIDI-WORKER\\SHIBASS-CUBASE-MIDI-WORKER.vmx",
+            "fileType": ".vmx",
+            "linesAdded": 53,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 0,
+            "language": "vmx"
+          },
+          {
+            "timestamp": "2026-07-08T11:11:58.179Z",
+            "fileName": "h:\\shibass-ai\\VM\\SHIBASS-CUBASE-MIDI-WORKER\\SHIBASS-CUBASE-MIDI-WORKER.vmx",
+            "fileType": ".vmx",
+            "linesAdded": 3,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "vmx"
+          },
+          {
+            "timestamp": "2026-07-08T11:11:58.693Z",
+            "fileName": "h:\\shibass-ai\\VM\\SHIBASS-CUBASE-MIDI-WORKER\\SHIBASS-CUBASE-MIDI-WORKER.vmx",
+            "fileType": ".vmx",
+            "linesAdded": 15,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "vmx"
+          },
+          {
+            "timestamp": "2026-07-08T11:11:59.082Z",
+            "fileName": "h:\\shibass-ai\\VM\\SHIBASS-CUBASE-MIDI-WORKER\\SHIBASS-CUBASE-MIDI-WORKER.vmx",
+            "fileType": ".vmx",
+            "linesAdded": 11,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "vmx"
+          },
+          {
+            "timestamp": "2026-07-08T11:11:59.484Z",
+            "fileName": "h:\\shibass-ai\\VM\\SHIBASS-CUBASE-MIDI-WORKER\\SHIBASS-CUBASE-MIDI-WORKER.vmx",
+            "fileType": ".vmx",
+            "linesAdded": 6,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "vmx"
           }
         ]
       },
