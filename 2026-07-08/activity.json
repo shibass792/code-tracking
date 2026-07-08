@@ -95,9 +95,9 @@
       "averageChangeSize": 708
     },
     "twenty_versions_aminor": {
-      "totalLinesAdded": 5410,
+      "totalLinesAdded": 5463,
       "totalLinesRemoved": 78,
-      "totalActiveTime": 178,
+      "totalActiveTime": 180,
       "files": {
         "h:\\shibass-ai\\logs\\cubase_extractor.log": [
           {
@@ -2478,6 +2478,36 @@
               "removed": []
             },
             "duration": 1,
+            "language": "py"
+          },
+          {
+            "timestamp": "2026-07-08T19:01:23.114Z",
+            "fileName": "c:\\Users\\shibass\\.gemini\\antigravity-ide\\scratch\\deploy_shibass_ai_src.py",
+            "fileType": ".py",
+            "linesAdded": 2,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 2,
+            "language": "py"
+          }
+        ],
+        "c:\\Users\\shibass\\.gemini\\antigravity-ide\\scratch\\list_guest_shibass_ai_v2.py": [
+          {
+            "timestamp": "2026-07-08T19:00:20.401Z",
+            "fileName": "c:\\Users\\shibass\\.gemini\\antigravity-ide\\scratch\\list_guest_shibass_ai_v2.py",
+            "fileType": ".py",
+            "linesAdded": 51,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 0,
             "language": "py"
           }
         ]
