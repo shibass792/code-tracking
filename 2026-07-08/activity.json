@@ -95,9 +95,9 @@
       "averageChangeSize": 708
     },
     "twenty_versions_aminor": {
-      "totalLinesAdded": 2827,
+      "totalLinesAdded": 2851,
       "totalLinesRemoved": 73,
-      "totalActiveTime": 124,
+      "totalActiveTime": 125,
       "files": {
         "h:\\shibass-ai\\logs\\cubase_extractor.log": [
           {
@@ -1881,6 +1881,36 @@
             },
             "duration": 0,
             "language": "py"
+          }
+        ],
+        "h:\\AI\\SHIBASS_CPR_MIDI_STRICT_V10\\scripts\\run.cmd": [
+          {
+            "timestamp": "2026-07-08T15:48:30.334Z",
+            "fileName": "h:\\AI\\SHIBASS_CPR_MIDI_STRICT_V10\\scripts\\run.cmd",
+            "fileType": ".cmd",
+            "linesAdded": 13,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 0,
+            "language": "cmd"
+          },
+          {
+            "timestamp": "2026-07-08T15:49:23.586Z",
+            "fileName": "h:\\AI\\SHIBASS_CPR_MIDI_STRICT_V10\\scripts\\run.cmd",
+            "fileType": ".cmd",
+            "linesAdded": 11,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "cmd"
           }
         ]
       },
