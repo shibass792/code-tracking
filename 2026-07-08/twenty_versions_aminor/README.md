@@ -4,17 +4,17 @@
 
 | Stat                   | Value                                                             |
 | ---------------------- | ----------------------------------------------------------------- |
-| **Lines Added** (➕)   | 2851                                          |
+| **Lines Added** (➕)   | 4047                                          |
 | **Lines Removed** (➖) | 73                                        |
-| **Net Change** (↕)    | 2778                |
-| **Active Time** (⌚)   | 125 minutes |
+| **Net Change** (↕)    | 3974                |
+| **Active Time** (⌚)   | 130 minutes |
 
 
 ## Modified Files
 - **cubase_extractor.log** (+378, -0)
 - **cubase_midi_extractor.ps1** (+654, -0)
 - **shibass_project_intelligence_panel.py** (+1049, -0)
-- **extractor.py** (+430, -22)
+- **extractor.py** (+432, -22)
 - **parse_links.py** (+25, -0)
 - **SHIBASS-CUBASE-MIDI-WORKER.vmx** (+167, -40)
 - **SHIBASS-UBUNTU.vmx** (+31, -0)
@@ -22,6 +22,9 @@
 - **test_guest_users.py** (+38, -10)
 - **run_and_copy.py** (+49, -1)
 - **run.cmd** (+24, -0)
+- **gui.py** (+540, -0)
+- **run_batch.py** (+112, -0)
+- **reports.py** (+542, -0)
 
 ## Visualizations
 
@@ -32,7 +35,7 @@ pie showData
 title Lines changed by file type
 ".log" : 378
 ".ps1" : 654
-".py" : 1624
+".py" : 2820
 ".vmx" : 238
 ".bat" : 6
 ".cmd" : 24
@@ -53,7 +56,8 @@ title Coding activity by hour (count of changes)
 "16h" : 5
 "17h" : 1
 "18h" : 3
+"19h" : 6
 ```
 
 
-> **Last Updated:** 7/8/2026, 6:53:01 PM
+> **Last Updated:** 7/8/2026, 7:23:01 PM
