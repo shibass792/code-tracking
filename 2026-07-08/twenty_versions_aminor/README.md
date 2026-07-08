@@ -4,10 +4,10 @@
 
 | Stat                   | Value                                                             |
 | ---------------------- | ----------------------------------------------------------------- |
-| **Lines Added** (➕)   | 5742                                          |
-| **Lines Removed** (➖) | 88                                        |
-| **Net Change** (↕)    | 5654                |
-| **Active Time** (⌚)   | 195 minutes |
+| **Lines Added** (➕)   | 5884                                          |
+| **Lines Removed** (➖) | 90                                        |
+| **Net Change** (↕)    | 5794                |
+| **Active Time** (⌚)   | 201 minutes |
 
 
 ## Modified Files
@@ -46,6 +46,9 @@
 - **check_node_guest.ps1** (+13, -2)
 - **START-EVERYTHING.cmd** (+40, -0)
 - **START-SB-STACK.ps1** (+58, -0)
+- **search_node_guest.py** (+44, -0)
+- **check_node_perms.py** (+51, -2)
+- **icacls_direct.py** (+47, -0)
 
 ## Visualizations
 
@@ -56,7 +59,7 @@ pie showData
 title Lines changed by file type
 ".log" : 378
 ".ps1" : 727
-".py" : 4417
+".py" : 4561
 ".vmx" : 238
 ".bat" : 6
 ".cmd" : 64
@@ -80,8 +83,8 @@ title Coding activity by hour (count of changes)
 "19h" : 19
 "20h" : 10
 "21h" : 9
-"22h" : 13
+"22h" : 18
 ```
 
 
-> **Last Updated:** 7/8/2026, 10:33:01 PM
+> **Last Updated:** 7/8/2026, 10:38:01 PM
