@@ -4,9 +4,9 @@
 
 | Stat                   | Value                                                             |
 | ---------------------- | ----------------------------------------------------------------- |
-| **Lines Added** (➕)   | 2624                                          |
+| **Lines Added** (➕)   | 2654                                          |
 | **Lines Removed** (➖) | 22                                        |
-| **Net Change** (↕)    | 2602                |
+| **Net Change** (↕)    | 2632                |
 | **Active Time** (⌚)   | 116 minutes |
 
 
@@ -17,6 +17,7 @@
 - **extractor.py** (+430, -22)
 - **parse_links.py** (+25, -0)
 - **SHIBASS-CUBASE-MIDI-WORKER.vmx** (+88, -0)
+- **SHIBASS-UBUNTU.vmx** (+30, -0)
 
 ## Visualizations
 
@@ -28,7 +29,7 @@ title Lines changed by file type
 ".log" : 378
 ".ps1" : 654
 ".py" : 1526
-".vmx" : 88
+".vmx" : 118
 ```
 
 ### By Hour (Estimated Activity Count)
@@ -41,8 +42,8 @@ title Coding activity by hour (count of changes)
 "11h" : 3
 "12h" : 4
 "13h" : 7
-"14h" : 5
+"14h" : 6
 ```
 
 
-> **Last Updated:** 7/8/2026, 2:12:11 PM
+> **Last Updated:** 7/8/2026, 2:32:11 PM

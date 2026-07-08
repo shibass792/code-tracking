@@ -95,7 +95,7 @@
       "averageChangeSize": 708
     },
     "twenty_versions_aminor": {
-      "totalLinesAdded": 2624,
+      "totalLinesAdded": 2654,
       "totalLinesRemoved": 22,
       "totalActiveTime": 116,
       "files": {
@@ -1676,6 +1676,22 @@
               "removed": []
             },
             "duration": 1,
+            "language": "vmx"
+          }
+        ],
+        "h:\\shibass-ai\\VM\\SHIBASS-UBUNTU\\SHIBASS-UBUNTU.vmx": [
+          {
+            "timestamp": "2026-07-08T11:32:06.250Z",
+            "fileName": "h:\\shibass-ai\\VM\\SHIBASS-UBUNTU\\SHIBASS-UBUNTU.vmx",
+            "fileType": ".vmx",
+            "linesAdded": 30,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 0,
             "language": "vmx"
           }
         ]
