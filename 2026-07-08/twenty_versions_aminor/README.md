@@ -4,10 +4,10 @@
 
 | Stat                   | Value                                                             |
 | ---------------------- | ----------------------------------------------------------------- |
-| **Lines Added** (➕)   | 4481                                          |
+| **Lines Added** (➕)   | 4595                                          |
 | **Lines Removed** (➖) | 78                                        |
-| **Net Change** (↕)    | 4403                |
-| **Active Time** (⌚)   | 161 minutes |
+| **Net Change** (↕)    | 4517                |
+| **Active Time** (⌚)   | 163 minutes |
 
 
 ## Modified Files
@@ -24,9 +24,10 @@
 - **run.cmd** (+24, -0)
 - **gui.py** (+646, -0)
 - **run_batch.py** (+112, -0)
-- **reports.py** (+542, -0)
+- **reports.py** (+579, -0)
 - **create_shortcuts.py** (+98, -0)
 - **deploy_claude_settings.py** (+115, -0)
+- **migrate_to_desktop.py** (+77, -0)
 
 ## Visualizations
 
@@ -37,7 +38,7 @@ pie showData
 title Lines changed by file type
 ".log" : 378
 ".ps1" : 654
-".py" : 3259
+".py" : 3373
 ".vmx" : 238
 ".bat" : 6
 ".cmd" : 24
@@ -59,8 +60,8 @@ title Coding activity by hour (count of changes)
 "17h" : 1
 "18h" : 3
 "19h" : 19
-"20h" : 1
+"20h" : 3
 ```
 
 
-> **Last Updated:** 7/8/2026, 8:03:01 PM
+> **Last Updated:** 7/8/2026, 8:08:01 PM
