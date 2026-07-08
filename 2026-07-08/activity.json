@@ -95,7 +95,7 @@
       "averageChangeSize": 708
     },
     "twenty_versions_aminor": {
-      "totalLinesAdded": 4719,
+      "totalLinesAdded": 4807,
       "totalLinesRemoved": 78,
       "totalActiveTime": 164,
       "files": {
@@ -2260,6 +2260,22 @@
               "removed": []
             },
             "duration": 1,
+            "language": "py"
+          }
+        ],
+        "c:\\Users\\shibass\\.gemini\\antigravity-ide\\scratch\\npm_install_in_guest.py": [
+          {
+            "timestamp": "2026-07-08T17:27:06.942Z",
+            "fileName": "c:\\Users\\shibass\\.gemini\\antigravity-ide\\scratch\\npm_install_in_guest.py",
+            "fileType": ".py",
+            "linesAdded": 88,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 0,
             "language": "py"
           }
         ]
