@@ -95,7 +95,7 @@
       "averageChangeSize": 708
     },
     "twenty_versions_aminor": {
-      "totalLinesAdded": 5004,
+      "totalLinesAdded": 5067,
       "totalLinesRemoved": 78,
       "totalActiveTime": 165,
       "files": {
@@ -2331,6 +2331,22 @@
             "fileName": "c:\\Users\\shibass\\.gemini\\antigravity-ide\\scratch\\list_guest_exports.py",
             "fileType": ".py",
             "linesAdded": 38,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 0,
+            "language": "py"
+          }
+        ],
+        "c:\\Users\\shibass\\.gemini\\antigravity-ide\\scratch\\copy_extractor_to_guest_c.py": [
+          {
+            "timestamp": "2026-07-08T18:00:34.238Z",
+            "fileName": "c:\\Users\\shibass\\.gemini\\antigravity-ide\\scratch\\copy_extractor_to_guest_c.py",
+            "fileType": ".py",
+            "linesAdded": 63,
             "linesRemoved": 0,
             "projectName": "twenty_versions_aminor",
             "content": {
