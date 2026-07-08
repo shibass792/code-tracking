@@ -95,7 +95,7 @@
       "averageChangeSize": 708
     },
     "twenty_versions_aminor": {
-      "totalLinesAdded": 2734,
+      "totalLinesAdded": 2740,
       "totalLinesRemoved": 62,
       "totalActiveTime": 122,
       "files": {
@@ -1791,6 +1791,22 @@
             },
             "duration": 3,
             "language": "vmx"
+          }
+        ],
+        "c:\\Users\\shibass\\.gemini\\antigravity-ide\\scratch\\start_services.bat": [
+          {
+            "timestamp": "2026-07-08T13:50:18.961Z",
+            "fileName": "c:\\Users\\shibass\\.gemini\\antigravity-ide\\scratch\\start_services.bat",
+            "fileType": ".bat",
+            "linesAdded": 6,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 0,
+            "language": "bat"
           }
         ]
       },
