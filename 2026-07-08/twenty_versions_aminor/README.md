@@ -4,10 +4,10 @@
 
 | Stat                   | Value                                                             |
 | ---------------------- | ----------------------------------------------------------------- |
-| **Lines Added** (➕)   | 5522                                          |
-| **Lines Removed** (➖) | 80                                        |
-| **Net Change** (↕)    | 5442                |
-| **Active Time** (⌚)   | 181 minutes |
+| **Lines Added** (➕)   | 5644                                          |
+| **Lines Removed** (➖) | 86                                        |
+| **Net Change** (↕)    | 5558                |
+| **Active Time** (⌚)   | 189 minutes |
 
 
 ## Modified Files
@@ -36,11 +36,14 @@
 - **copy_extractor_to_guest_c.py** (+63, -0)
 - **check_guest_port_with_file.py** (+47, -0)
 - **check_tasklist.py** (+40, -0)
-- **check_node_temp.py** (+53, -2)
+- **check_node_temp.py** (+57, -8)
 - **get_vm_screenshot.py** (+24, -0)
 - **run_guest_node_debug.py** (+51, -0)
 - **deploy_shibass_ai_src.py** (+132, -0)
 - **list_guest_shibass_ai_v2.py** (+51, -0)
+- **run_check_node_local.py** (+40, -0)
+- **check_node_local.py** (+65, -0)
+- **check_node_guest.ps1** (+13, -0)
 
 ## Visualizations
 
@@ -50,8 +53,8 @@
 pie showData
 title Lines changed by file type
 ".log" : 378
-".ps1" : 654
-".py" : 4302
+".ps1" : 667
+".py" : 4417
 ".vmx" : 238
 ".bat" : 6
 ".cmd" : 24
@@ -75,8 +78,8 @@ title Coding activity by hour (count of changes)
 "19h" : 19
 "20h" : 10
 "21h" : 9
-"22h" : 5
+"22h" : 10
 ```
 
 
-> **Last Updated:** 7/8/2026, 10:23:01 PM
+> **Last Updated:** 7/8/2026, 10:28:01 PM
