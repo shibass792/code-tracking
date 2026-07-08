@@ -4,9 +4,9 @@
 
 | Stat                   | Value                                                             |
 | ---------------------- | ----------------------------------------------------------------- |
-| **Lines Added** (➕)   | 2778                                          |
+| **Lines Added** (➕)   | 2827                                          |
 | **Lines Removed** (➖) | 72                                        |
-| **Net Change** (↕)    | 2706                |
+| **Net Change** (↕)    | 2755                |
 | **Active Time** (⌚)   | 124 minutes |
 
 
@@ -20,6 +20,7 @@
 - **SHIBASS-UBUNTU.vmx** (+31, -0)
 - **start_services.bat** (+6, -0)
 - **test_guest_users.py** (+38, -10)
+- **run_and_copy.py** (+49, -0)
 
 ## Visualizations
 
@@ -30,7 +31,7 @@ pie showData
 title Lines changed by file type
 ".log" : 378
 ".ps1" : 654
-".py" : 1574
+".py" : 1623
 ".vmx" : 238
 ".bat" : 6
 ```
@@ -48,7 +49,8 @@ title Coding activity by hour (count of changes)
 "14h" : 8
 "15h" : 4
 "16h" : 5
+"17h" : 1
 ```
 
 
-> **Last Updated:** 7/8/2026, 4:58:01 PM
+> **Last Updated:** 7/8/2026, 5:58:01 PM
