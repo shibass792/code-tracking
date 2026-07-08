@@ -4,10 +4,10 @@
 
 | Stat                   | Value                                                             |
 | ---------------------- | ----------------------------------------------------------------- |
-| **Lines Added** (➕)   | 5229                                          |
+| **Lines Added** (➕)   | 5410                                          |
 | **Lines Removed** (➖) | 78                                        |
-| **Net Change** (↕)    | 5151                |
-| **Active Time** (⌚)   | 171 minutes |
+| **Net Change** (↕)    | 5332                |
+| **Active Time** (⌚)   | 178 minutes |
 
 
 ## Modified Files
@@ -38,6 +38,8 @@
 - **check_tasklist.py** (+40, -0)
 - **check_node_temp.py** (+51, -0)
 - **get_vm_screenshot.py** (+24, -0)
+- **run_guest_node_debug.py** (+51, -0)
+- **deploy_shibass_ai_src.py** (+130, -0)
 
 ## Visualizations
 
@@ -48,7 +50,7 @@ pie showData
 title Lines changed by file type
 ".log" : 378
 ".ps1" : 654
-".py" : 4007
+".py" : 4188
 ".vmx" : 238
 ".bat" : 6
 ".cmd" : 24
@@ -71,8 +73,8 @@ title Coding activity by hour (count of changes)
 "18h" : 3
 "19h" : 19
 "20h" : 10
-"21h" : 6
+"21h" : 9
 ```
 
 
-> **Last Updated:** 7/8/2026, 9:38:01 PM
+> **Last Updated:** 7/8/2026, 9:43:01 PM
