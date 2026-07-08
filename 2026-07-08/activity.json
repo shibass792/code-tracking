@@ -95,9 +95,9 @@
       "averageChangeSize": 708
     },
     "twenty_versions_aminor": {
-      "totalLinesAdded": 2505,
-      "totalLinesRemoved": 11,
-      "totalActiveTime": 104,
+      "totalLinesAdded": 2511,
+      "totalLinesRemoved": 22,
+      "totalActiveTime": 112,
       "files": {
         "h:\\shibass-ai\\logs\\cubase_extractor.log": [
           {
@@ -1540,6 +1540,48 @@
             "fileType": ".py",
             "linesAdded": 0,
             "linesRemoved": 11,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "py"
+          },
+          {
+            "timestamp": "2026-07-08T10:12:19.374Z",
+            "fileName": "h:\\AI\\SHIBASS_CPR_MIDI_STRICT_V10\\app\\extractor.py",
+            "fileType": ".py",
+            "linesAdded": 0,
+            "linesRemoved": 11,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 5,
+            "language": "py"
+          },
+          {
+            "timestamp": "2026-07-08T10:13:58.127Z",
+            "fileName": "h:\\AI\\SHIBASS_CPR_MIDI_STRICT_V10\\app\\extractor.py",
+            "fileType": ".py",
+            "linesAdded": 1,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 2,
+            "language": "py"
+          },
+          {
+            "timestamp": "2026-07-08T10:14:09.999Z",
+            "fileName": "h:\\AI\\SHIBASS_CPR_MIDI_STRICT_V10\\app\\extractor.py",
+            "fileType": ".py",
+            "linesAdded": 5,
+            "linesRemoved": 0,
             "projectName": "twenty_versions_aminor",
             "content": {
               "added": [],
