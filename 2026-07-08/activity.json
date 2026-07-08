@@ -95,9 +95,9 @@
       "averageChangeSize": 708
     },
     "twenty_versions_aminor": {
-      "totalLinesAdded": 139,
+      "totalLinesAdded": 967,
       "totalLinesRemoved": 0,
-      "totalActiveTime": 17,
+      "totalActiveTime": 34,
       "files": {
         "h:\\shibass-ai\\logs\\cubase_extractor.log": [
           {
@@ -351,6 +351,260 @@
             },
             "duration": 1,
             "language": "log"
+          },
+          {
+            "timestamp": "2026-07-08T07:45:55.384Z",
+            "fileName": "h:\\shibass-ai\\logs\\cubase_extractor.log",
+            "fileType": ".log",
+            "linesAdded": 162,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "log"
+          },
+          {
+            "timestamp": "2026-07-08T07:45:55.963Z",
+            "fileName": "h:\\shibass-ai\\logs\\cubase_extractor.log",
+            "fileType": ".log",
+            "linesAdded": 1,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "log"
+          },
+          {
+            "timestamp": "2026-07-08T07:45:56.530Z",
+            "fileName": "h:\\shibass-ai\\logs\\cubase_extractor.log",
+            "fileType": ".log",
+            "linesAdded": 1,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "log"
+          },
+          {
+            "timestamp": "2026-07-08T07:45:57.131Z",
+            "fileName": "h:\\shibass-ai\\logs\\cubase_extractor.log",
+            "fileType": ".log",
+            "linesAdded": 2,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "log"
+          },
+          {
+            "timestamp": "2026-07-08T07:46:32.129Z",
+            "fileName": "h:\\shibass-ai\\logs\\cubase_extractor.log",
+            "fileType": ".log",
+            "linesAdded": 1,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "log"
+          },
+          {
+            "timestamp": "2026-07-08T07:46:32.721Z",
+            "fileName": "h:\\shibass-ai\\logs\\cubase_extractor.log",
+            "fileType": ".log",
+            "linesAdded": 1,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "log"
+          },
+          {
+            "timestamp": "2026-07-08T07:46:35.494Z",
+            "fileName": "h:\\shibass-ai\\logs\\cubase_extractor.log",
+            "fileType": ".log",
+            "linesAdded": 1,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "log"
+          },
+          {
+            "timestamp": "2026-07-08T07:46:39.707Z",
+            "fileName": "h:\\shibass-ai\\logs\\cubase_extractor.log",
+            "fileType": ".log",
+            "linesAdded": 1,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "log"
+          },
+          {
+            "timestamp": "2026-07-08T07:46:45.708Z",
+            "fileName": "h:\\shibass-ai\\logs\\cubase_extractor.log",
+            "fileType": ".log",
+            "linesAdded": 1,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "log"
+          },
+          {
+            "timestamp": "2026-07-08T07:46:49.756Z",
+            "fileName": "h:\\shibass-ai\\logs\\cubase_extractor.log",
+            "fileType": ".log",
+            "linesAdded": 1,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "log"
+          },
+          {
+            "timestamp": "2026-07-08T07:46:50.349Z",
+            "fileName": "h:\\shibass-ai\\logs\\cubase_extractor.log",
+            "fileType": ".log",
+            "linesAdded": 1,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "log"
+          },
+          {
+            "timestamp": "2026-07-08T07:46:53.158Z",
+            "fileName": "h:\\shibass-ai\\logs\\cubase_extractor.log",
+            "fileType": ".log",
+            "linesAdded": 1,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "log"
+          },
+          {
+            "timestamp": "2026-07-08T07:46:57.641Z",
+            "fileName": "h:\\shibass-ai\\logs\\cubase_extractor.log",
+            "fileType": ".log",
+            "linesAdded": 1,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "log"
+          },
+          {
+            "timestamp": "2026-07-08T07:47:03.728Z",
+            "fileName": "h:\\shibass-ai\\logs\\cubase_extractor.log",
+            "fileType": ".log",
+            "linesAdded": 1,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "log"
+          },
+          {
+            "timestamp": "2026-07-08T07:47:07.827Z",
+            "fileName": "h:\\shibass-ai\\logs\\cubase_extractor.log",
+            "fileType": ".log",
+            "linesAdded": 1,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "log"
+          },
+          {
+            "timestamp": "2026-07-08T07:47:08.353Z",
+            "fileName": "h:\\shibass-ai\\logs\\cubase_extractor.log",
+            "fileType": ".log",
+            "linesAdded": 1,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "log"
+          },
+          {
+            "timestamp": "2026-07-08T07:47:11.136Z",
+            "fileName": "h:\\shibass-ai\\logs\\cubase_extractor.log",
+            "fileType": ".log",
+            "linesAdded": 1,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "log"
+          }
+        ],
+        "h:\\shibass-ai\\scripts\\cubase_midi_extractor.ps1": [
+          {
+            "timestamp": "2026-07-08T07:45:46.536Z",
+            "fileName": "h:\\shibass-ai\\scripts\\cubase_midi_extractor.ps1",
+            "fileType": ".ps1",
+            "linesAdded": 649,
+            "linesRemoved": 0,
+            "projectName": "twenty_versions_aminor",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 0,
+            "language": "ps1"
           }
         ]
       },
