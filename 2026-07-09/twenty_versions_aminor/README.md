@@ -4,10 +4,10 @@
 
 | Stat                   | Value                                                             |
 | ---------------------- | ----------------------------------------------------------------- |
-| **Lines Added** (➕)   | 15796                                          |
+| **Lines Added** (➕)   | 15865                                          |
 | **Lines Removed** (➖) | 112                                        |
-| **Net Change** (↕)    | 15684                |
-| **Active Time** (⌚)   | 83 minutes |
+| **Net Change** (↕)    | 15753                |
+| **Active Time** (⌚)   | 85 minutes |
 
 
 ## Modified Files
@@ -33,6 +33,9 @@
 - **ops-routes.js** (+713, -0)
 - **sb-crew.html** (+1313, -14)
 - **crew-agent-worker.js** (+519, -0)
+- **START_PORTAL.ps1** (+8, -0)
+- **STOP_PORTAL.ps1** (+16, -0)
+- **CHECK_PORTAL.ps1** (+45, -0)
 
 ## Visualizations
 
@@ -45,6 +48,7 @@ title Lines changed by file type
 ".js" : 2735
 ".html" : 12388
 ".json" : 510
+".ps1" : 69
 ```
 
 ### By Hour (Estimated Activity Count)
@@ -61,8 +65,8 @@ title Coding activity by hour (count of changes)
 "18h" : 5
 "20h" : 1
 "21h" : 11
-"22h" : 7
+"22h" : 10
 ```
 
 
-> **Last Updated:** 7/9/2026, 10:12:51 PM
+> **Last Updated:** 7/9/2026, 10:22:51 PM
