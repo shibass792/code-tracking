@@ -4,10 +4,10 @@
 
 | Stat                   | Value                                                             |
 | ---------------------- | ----------------------------------------------------------------- |
-| **Lines Added** (➕)   | 17735                                          |
+| **Lines Added** (➕)   | 18270                                          |
 | **Lines Removed** (➖) | 112                                        |
-| **Net Change** (↕)    | 17623                |
-| **Active Time** (⌚)   | 87 minutes |
+| **Net Change** (↕)    | 18158                |
+| **Active Time** (⌚)   | 96 minutes |
 
 
 ## Modified Files
@@ -30,13 +30,15 @@
 - **midi-homework-factory-routes.js** (+521, -0)
 - **everything.html** (+147, -0)
 - **installer.html** (+2976, -0)
-- **ops-routes.js** (+713, -0)
+- **ops-routes.js** (+1196, -0)
 - **sb-crew.html** (+1474, -14)
 - **crew-agent-worker.js** (+519, -0)
 - **START_PORTAL.ps1** (+8, -0)
 - **STOP_PORTAL.ps1** (+16, -0)
 - **CHECK_PORTAL.ps1** (+45, -0)
 - **server.js** (+1709, -0)
+- **START_PORTAL_4275.ps1** (+26, -0)
+- **START_PORTAL_4275.ps1** (+26, -0)
 
 ## Visualizations
 
@@ -46,10 +48,10 @@
 pie showData
 title Lines changed by file type
 ".py" : 275
-".js" : 4444
+".js" : 4927
 ".html" : 12549
 ".json" : 510
-".ps1" : 69
+".ps1" : 121
 ```
 
 ### By Hour (Estimated Activity Count)
@@ -66,8 +68,8 @@ title Coding activity by hour (count of changes)
 "18h" : 5
 "20h" : 1
 "21h" : 11
-"22h" : 14
+"22h" : 18
 ```
 
 
-> **Last Updated:** 7/9/2026, 10:52:51 PM
+> **Last Updated:** 7/9/2026, 10:57:51 PM
