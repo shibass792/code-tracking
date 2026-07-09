@@ -4,10 +4,10 @@
 
 | Stat                   | Value                                                             |
 | ---------------------- | ----------------------------------------------------------------- |
-| **Lines Added** (➕)   | 14892                                          |
-| **Lines Removed** (➖) | 98                                        |
-| **Net Change** (↕)    | 14794                |
-| **Active Time** (⌚)   | 73 minutes |
+| **Lines Added** (➕)   | 15790                                          |
+| **Lines Removed** (➖) | 112                                        |
+| **Net Change** (↕)    | 15678                |
+| **Active Time** (⌚)   | 80 minutes |
 
 
 ## Modified Files
@@ -31,7 +31,8 @@
 - **everything.html** (+147, -0)
 - **installer.html** (+2976, -0)
 - **ops-routes.js** (+713, -0)
-- **sb-crew.html** (+928, -0)
+- **sb-crew.html** (+1307, -14)
+- **crew-agent-worker.js** (+519, -0)
 
 ## Visualizations
 
@@ -41,8 +42,8 @@
 pie showData
 title Lines changed by file type
 ".py" : 275
-".js" : 2216
-".html" : 11989
+".js" : 2735
+".html" : 12382
 ".json" : 510
 ```
 
@@ -60,7 +61,8 @@ title Coding activity by hour (count of changes)
 "18h" : 5
 "20h" : 1
 "21h" : 11
+"22h" : 6
 ```
 
 
-> **Last Updated:** 7/9/2026, 9:52:51 PM
+> **Last Updated:** 7/9/2026, 10:07:51 PM
