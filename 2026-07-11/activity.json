@@ -1,0 +1,75 @@
+{
+  "date": "2026-07-11",
+  "projects": {
+    "Untitled (Workspace)": {
+      "totalLinesAdded": 926,
+      "totalLinesRemoved": 0,
+      "totalActiveTime": 2,
+      "files": {
+        "h:\\shibass-ai\\public\\project-learning-center.html": [
+          {
+            "timestamp": "2026-07-11T02:03:28.947Z",
+            "fileName": "h:\\shibass-ai\\public\\project-learning-center.html",
+            "fileType": ".html",
+            "linesAdded": 904,
+            "linesRemoved": 0,
+            "projectName": "Untitled (Workspace)",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 0,
+            "language": "html"
+          },
+          {
+            "timestamp": "2026-07-11T02:03:46.776Z",
+            "fileName": "h:\\shibass-ai\\public\\project-learning-center.html",
+            "fileType": ".html",
+            "linesAdded": 6,
+            "linesRemoved": 0,
+            "projectName": "Untitled (Workspace)",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "html"
+          },
+          {
+            "timestamp": "2026-07-11T02:03:52.755Z",
+            "fileName": "h:\\shibass-ai\\public\\project-learning-center.html",
+            "fileType": ".html",
+            "linesAdded": 16,
+            "linesRemoved": 0,
+            "projectName": "Untitled (Workspace)",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "html"
+          }
+        ]
+      },
+      "languageStats": {
+        "html": 2
+      },
+      "changeFrequency": {
+        "5": 2
+      },
+      "topFiles": [
+        "h:\\shibass-ai\\public\\project-learning-center.html"
+      ],
+      "averageChangeSize": 308.6666666666667
+    }
+  },
+  "totalActiveTime": 2,
+  "totalProjects": 1,
+  "totalFiles": 1,
+  "mostActiveHours": [
+    5
+  ],
+  "mostUsedLanguages": [
+    "html"
+  ]
+}
