@@ -3,7 +3,7 @@
   "projects": {
     "Untitled (Workspace)": {
       "totalLinesAdded": 1376,
-      "totalLinesRemoved": 0,
+      "totalLinesRemoved": 2,
       "totalActiveTime": 8,
       "files": {
         "h:\\shibass-ai\\public\\project-learning-center.html": [
@@ -215,6 +215,20 @@
               "removed": []
             },
             "duration": 1,
+            "language": "html"
+          },
+          {
+            "timestamp": "2026-07-12T11:09:49.626Z",
+            "fileName": "h:\\shibass-ai\\public\\project-learning-center.html",
+            "fileType": ".html",
+            "linesAdded": 0,
+            "linesRemoved": 2,
+            "projectName": "Untitled (Workspace)",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 0,
             "language": "html"
           }
         ]
