@@ -1,0 +1,61 @@
+{
+  "date": "2026-07-12",
+  "projects": {
+    "Untitled (Workspace)": {
+      "totalLinesAdded": 226,
+      "totalLinesRemoved": 0,
+      "totalActiveTime": 1,
+      "files": {
+        "h:\\shibass-ai\\public\\project-learning-center.html": [
+          {
+            "timestamp": "2026-07-12T09:56:24.217Z",
+            "fileName": "h:\\shibass-ai\\public\\project-learning-center.html",
+            "fileType": ".html",
+            "linesAdded": 93,
+            "linesRemoved": 0,
+            "projectName": "Untitled (Workspace)",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 0,
+            "language": "html"
+          },
+          {
+            "timestamp": "2026-07-12T09:56:42.931Z",
+            "fileName": "h:\\shibass-ai\\public\\project-learning-center.html",
+            "fileType": ".html",
+            "linesAdded": 133,
+            "linesRemoved": 0,
+            "projectName": "Untitled (Workspace)",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "html"
+          }
+        ]
+      },
+      "languageStats": {
+        "html": 1
+      },
+      "changeFrequency": {
+        "12": 1
+      },
+      "topFiles": [
+        "h:\\shibass-ai\\public\\project-learning-center.html"
+      ],
+      "averageChangeSize": 113
+    }
+  },
+  "totalActiveTime": 1,
+  "totalProjects": 1,
+  "totalFiles": 1,
+  "mostActiveHours": [
+    12
+  ],
+  "mostUsedLanguages": [
+    "html"
+  ]
+}
