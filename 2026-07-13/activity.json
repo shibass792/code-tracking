@@ -3,7 +3,7 @@
   "projects": {
     "Untitled (Workspace)": {
       "totalLinesAdded": 5104,
-      "totalLinesRemoved": 15,
+      "totalLinesRemoved": 20,
       "totalActiveTime": 3,
       "files": {
         "h:\\shibass-ai\\public\\project-learning-center.html": [
@@ -65,6 +65,20 @@
               "removed": []
             },
             "duration": 3,
+            "language": "vmx"
+          },
+          {
+            "timestamp": "2026-07-12T23:15:15.774Z",
+            "fileName": "c:\\Users\\shibass\\Documents\\Virtual Machines\\Ubuntu 64-bit\\Ubuntu 64-bit.vmx",
+            "fileType": ".vmx",
+            "linesAdded": 0,
+            "linesRemoved": 5,
+            "projectName": "Untitled (Workspace)",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 0,
             "language": "vmx"
           }
         ]
