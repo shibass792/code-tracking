@@ -2,7 +2,7 @@
   "date": "2026-07-13",
   "projects": {
     "Untitled (Workspace)": {
-      "totalLinesAdded": 5113,
+      "totalLinesAdded": 5125,
       "totalLinesRemoved": 20,
       "totalActiveTime": 7,
       "files": {
@@ -96,6 +96,22 @@
             },
             "duration": 4,
             "language": "ps1"
+          }
+        ],
+        "d:\\all projects\\map_ubuntu_drive.bat": [
+          {
+            "timestamp": "2026-07-12T23:51:49.049Z",
+            "fileName": "d:\\all projects\\map_ubuntu_drive.bat",
+            "fileType": ".bat",
+            "linesAdded": 12,
+            "linesRemoved": 0,
+            "projectName": "Untitled (Workspace)",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 0,
+            "language": "bat"
           }
         ]
       },
