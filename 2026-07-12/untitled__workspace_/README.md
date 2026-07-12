@@ -4,10 +4,10 @@
 
 | Stat                   | Value                                                             |
 | ---------------------- | ----------------------------------------------------------------- |
-| **Lines Added** (➕)   | 13900                                          |
+| **Lines Added** (➕)   | 13932                                          |
 | **Lines Removed** (➖) | 2                                        |
-| **Net Change** (↕)    | 13898                |
-| **Active Time** (⌚)   | 31 minutes |
+| **Net Change** (↕)    | 13930                |
+| **Active Time** (⌚)   | 36 minutes |
 
 
 ## Modified Files
@@ -20,6 +20,7 @@
 - **test_safe_mode_dismissal.py** (+123, -0)
 - **run_controlled_test.py** (+804, -0)
 - **get_cubase_window_pid.py** (+23, -0)
+- **list_visible_windows.py** (+32, -0)
 
 ## Visualizations
 
@@ -29,7 +30,7 @@
 pie showData
 title Lines changed by file type
 ".html" : 9777
-".py" : 3297
+".py" : 3329
 ".js" : 828
 ```
 
@@ -44,7 +45,8 @@ title Coding activity by hour (count of changes)
 "15h" : 2
 "16h" : 4
 "17h" : 10
+"18h" : 1
 ```
 
 
-> **Last Updated:** 7/12/2026, 6:04:04 PM
+> **Last Updated:** 7/12/2026, 6:09:04 PM
