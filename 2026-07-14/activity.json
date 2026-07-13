@@ -2,9 +2,9 @@
   "date": "2026-07-14",
   "projects": {
     "shibass-ai": {
-      "totalLinesAdded": 4978,
+      "totalLinesAdded": 5261,
       "totalLinesRemoved": 1,
-      "totalActiveTime": 24,
+      "totalActiveTime": 30,
       "files": {
         "h:\\shibass-ai\\scan_subnets.ps1": [
           {
@@ -240,6 +240,20 @@
             },
             "duration": 0,
             "language": "js"
+          },
+          {
+            "timestamp": "2026-07-13T23:01:22.757Z",
+            "fileName": "h:\\shibass-ai\\scripts\\simulate_fleet.js",
+            "fileType": ".js",
+            "linesAdded": 68,
+            "linesRemoved": 0,
+            "projectName": "shibass-ai",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 3,
+            "language": "js"
           }
         ],
         "h:\\shibass-ai\\public\\sb-fleet.html": [
@@ -262,6 +276,34 @@
             "fileName": "h:\\shibass-ai\\public\\sb-fleet.html",
             "fileType": ".html",
             "linesAdded": 27,
+            "linesRemoved": 0,
+            "projectName": "shibass-ai",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "html"
+          },
+          {
+            "timestamp": "2026-07-13T23:02:31.242Z",
+            "fileName": "h:\\shibass-ai\\public\\sb-fleet.html",
+            "fileType": ".html",
+            "linesAdded": 203,
+            "linesRemoved": 0,
+            "projectName": "shibass-ai",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 2,
+            "language": "html"
+          },
+          {
+            "timestamp": "2026-07-13T23:02:41.044Z",
+            "fileName": "h:\\shibass-ai\\public\\sb-fleet.html",
+            "fileType": ".html",
+            "linesAdded": 12,
             "linesRemoved": 0,
             "projectName": "shibass-ai",
             "content": {
