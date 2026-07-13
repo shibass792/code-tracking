@@ -2,7 +2,7 @@
   "date": "2026-07-14",
   "projects": {
     "shibass-ai": {
-      "totalLinesAdded": 1367,
+      "totalLinesAdded": 1386,
       "totalLinesRemoved": 0,
       "totalActiveTime": 6,
       "files": {
@@ -107,6 +107,22 @@
               "removed": []
             },
             "duration": 1,
+            "language": "ps1"
+          }
+        ],
+        "c:\\Users\\shibass\\.gemini\\antigravity-ide\\brain\\8372bc43-8c3c-463f-b8ba-352d91c6662d\\scratch\\restart_server.ps1": [
+          {
+            "timestamp": "2026-07-13T22:26:40.605Z",
+            "fileName": "c:\\Users\\shibass\\.gemini\\antigravity-ide\\brain\\8372bc43-8c3c-463f-b8ba-352d91c6662d\\scratch\\restart_server.ps1",
+            "fileType": ".ps1",
+            "linesAdded": 19,
+            "linesRemoved": 0,
+            "projectName": "shibass-ai",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 0,
             "language": "ps1"
           }
         ]
