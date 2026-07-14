@@ -2,7 +2,7 @@
   "date": "2026-07-15",
   "projects": {
     "User": {
-      "totalLinesAdded": 8,
+      "totalLinesAdded": 9,
       "totalLinesRemoved": 0,
       "totalActiveTime": 1,
       "files": {
@@ -33,6 +33,20 @@
               "removed": []
             },
             "duration": 1,
+            "language": "json"
+          },
+          {
+            "timestamp": "2026-07-14T23:56:07.446Z",
+            "fileName": "c:\\Users\\shibass\\AppData\\Roaming\\Antigravity IDE\\User\\settings.json",
+            "fileType": ".json",
+            "linesAdded": 1,
+            "linesRemoved": 0,
+            "projectName": "User",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 0,
             "language": "json"
           }
         ]
