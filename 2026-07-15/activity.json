@@ -1,0 +1,61 @@
+{
+  "date": "2026-07-15",
+  "projects": {
+    "User": {
+      "totalLinesAdded": 8,
+      "totalLinesRemoved": 0,
+      "totalActiveTime": 1,
+      "files": {
+        "c:\\Users\\shibass\\AppData\\Roaming\\Antigravity IDE\\User\\settings.json": [
+          {
+            "timestamp": "2026-07-14T23:38:56.384Z",
+            "fileName": "c:\\Users\\shibass\\AppData\\Roaming\\Antigravity IDE\\User\\settings.json",
+            "fileType": ".json",
+            "linesAdded": 7,
+            "linesRemoved": 0,
+            "projectName": "User",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 0,
+            "language": "json"
+          },
+          {
+            "timestamp": "2026-07-14T23:39:14.869Z",
+            "fileName": "c:\\Users\\shibass\\AppData\\Roaming\\Antigravity IDE\\User\\settings.json",
+            "fileType": ".json",
+            "linesAdded": 1,
+            "linesRemoved": 0,
+            "projectName": "User",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "json"
+          }
+        ]
+      },
+      "languageStats": {
+        "json": 1
+      },
+      "changeFrequency": {
+        "2": 1
+      },
+      "topFiles": [
+        "c:\\Users\\shibass\\AppData\\Roaming\\Antigravity IDE\\User\\settings.json"
+      ],
+      "averageChangeSize": 4
+    }
+  },
+  "totalActiveTime": 1,
+  "totalProjects": 1,
+  "totalFiles": 1,
+  "mostActiveHours": [
+    2
+  ],
+  "mostUsedLanguages": [
+    "json"
+  ]
+}
