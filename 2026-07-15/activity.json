@@ -63,7 +63,7 @@
       "averageChangeSize": 4
     },
     "shibass-ai": {
-      "totalLinesAdded": 9548,
+      "totalLinesAdded": 9599,
       "totalLinesRemoved": 3,
       "totalActiveTime": 83,
       "files": {
@@ -943,6 +943,22 @@
             },
             "duration": 0,
             "language": "html"
+          }
+        ],
+        "h:\\shibass-ai\\START-SHIBASS-PORTABLE.cmd": [
+          {
+            "timestamp": "2026-07-15T20:08:06.437Z",
+            "fileName": "h:\\shibass-ai\\START-SHIBASS-PORTABLE.cmd",
+            "fileType": ".cmd",
+            "linesAdded": 51,
+            "linesRemoved": 0,
+            "projectName": "shibass-ai",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 0,
+            "language": "cmd"
           }
         ]
       },
