@@ -262,6 +262,39 @@
         "h:\\shibass-ai\\SHIBASS_CUBASE_HUMAN_CONTROL\\panel\\index.html"
       ],
       "averageChangeSize": 211.33333333333334
+    },
+    "Cubase 15_64": {
+      "totalLinesAdded": 13740,
+      "totalLinesRemoved": 0,
+      "totalActiveTime": 0,
+      "files": {
+        "c:\\Users\\shibass\\AppData\\Roaming\\Steinberg\\Cubase 15_64\\Key Commands.xml": [
+          {
+            "timestamp": "2026-07-16T15:10:35.530Z",
+            "fileName": "c:\\Users\\shibass\\AppData\\Roaming\\Steinberg\\Cubase 15_64\\Key Commands.xml",
+            "fileType": ".xml",
+            "linesAdded": 13740,
+            "linesRemoved": 0,
+            "projectName": "Cubase 15_64",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 0,
+            "language": "xml"
+          }
+        ]
+      },
+      "languageStats": {
+        "xml": 0
+      },
+      "changeFrequency": {
+        "18": 0
+      },
+      "topFiles": [
+        "c:\\Users\\shibass\\AppData\\Roaming\\Steinberg\\Cubase 15_64\\Key Commands.xml"
+      ],
+      "averageChangeSize": 13740
     }
   },
   "totalActiveTime": 0,
