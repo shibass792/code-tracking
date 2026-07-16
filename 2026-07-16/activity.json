@@ -264,9 +264,9 @@
       "averageChangeSize": 211.33333333333334
     },
     "Cubase 15_64": {
-      "totalLinesAdded": 13741,
+      "totalLinesAdded": 13744,
       "totalLinesRemoved": 0,
-      "totalActiveTime": 0,
+      "totalActiveTime": 2,
       "files": {
         "c:\\Users\\shibass\\AppData\\Roaming\\Steinberg\\Cubase 15_64\\Key Commands.xml": [
           {
@@ -295,6 +295,34 @@
               "removed": []
             },
             "duration": 0,
+            "language": "xml"
+          },
+          {
+            "timestamp": "2026-07-16T17:23:40.654Z",
+            "fileName": "c:\\Users\\shibass\\AppData\\Roaming\\Steinberg\\Cubase 15_64\\Key Commands.xml",
+            "fileType": ".xml",
+            "linesAdded": 1,
+            "linesRemoved": 0,
+            "projectName": "Cubase 15_64",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 0,
+            "language": "xml"
+          },
+          {
+            "timestamp": "2026-07-16T17:24:50.655Z",
+            "fileName": "c:\\Users\\shibass\\AppData\\Roaming\\Steinberg\\Cubase 15_64\\Key Commands.xml",
+            "fileType": ".xml",
+            "linesAdded": 2,
+            "linesRemoved": 0,
+            "projectName": "Cubase 15_64",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 2,
             "language": "xml"
           }
         ]
