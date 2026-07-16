@@ -33,6 +33,67 @@
         "h:\\shibass-ai\\START-SHIBASS-PORTABLE.cmd"
       ],
       "averageChangeSize": 60
+    },
+    "panel": {
+      "totalLinesAdded": 633,
+      "totalLinesRemoved": 1,
+      "totalActiveTime": 2,
+      "files": {
+        "h:\\shibass-ai\\SHIBASS_CUBASE_HUMAN_CONTROL\\panel\\index.html": [
+          {
+            "timestamp": "2026-07-16T08:05:33.293Z",
+            "fileName": "h:\\shibass-ai\\SHIBASS_CUBASE_HUMAN_CONTROL\\panel\\index.html",
+            "fileType": ".html",
+            "linesAdded": 630,
+            "linesRemoved": 0,
+            "projectName": "panel",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 0,
+            "language": "html"
+          },
+          {
+            "timestamp": "2026-07-16T08:05:39.319Z",
+            "fileName": "h:\\shibass-ai\\SHIBASS_CUBASE_HUMAN_CONTROL\\panel\\index.html",
+            "fileType": ".html",
+            "linesAdded": 0,
+            "linesRemoved": 1,
+            "projectName": "panel",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "html"
+          },
+          {
+            "timestamp": "2026-07-16T08:05:48.311Z",
+            "fileName": "h:\\shibass-ai\\SHIBASS_CUBASE_HUMAN_CONTROL\\panel\\index.html",
+            "fileType": ".html",
+            "linesAdded": 3,
+            "linesRemoved": 0,
+            "projectName": "panel",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "html"
+          }
+        ]
+      },
+      "languageStats": {
+        "html": 2
+      },
+      "changeFrequency": {
+        "11": 2
+      },
+      "topFiles": [
+        "h:\\shibass-ai\\SHIBASS_CUBASE_HUMAN_CONTROL\\panel\\index.html"
+      ],
+      "averageChangeSize": 211.33333333333334
     }
   },
   "totalActiveTime": 0,
