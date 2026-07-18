@@ -1,0 +1,61 @@
+{
+  "date": "2026-07-19",
+  "projects": {
+    "scratch": {
+      "totalLinesAdded": 26,
+      "totalLinesRemoved": 0,
+      "totalActiveTime": 1,
+      "files": {
+        "c:\\Users\\shibass\\.gemini\\antigravity-ide\\brain\\6da6064e-f9b9-41d7-a094-3476b3cacd8e\\scratch\\RESTART_SHIBASS_SOUND.cmd": [
+          {
+            "timestamp": "2026-07-18T20:57:57.722Z",
+            "fileName": "c:\\Users\\shibass\\.gemini\\antigravity-ide\\brain\\6da6064e-f9b9-41d7-a094-3476b3cacd8e\\scratch\\RESTART_SHIBASS_SOUND.cmd",
+            "fileType": ".cmd",
+            "linesAdded": 1,
+            "linesRemoved": 0,
+            "projectName": "scratch",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 0,
+            "language": "cmd"
+          },
+          {
+            "timestamp": "2026-07-18T20:58:05.175Z",
+            "fileName": "c:\\Users\\shibass\\.gemini\\antigravity-ide\\brain\\6da6064e-f9b9-41d7-a094-3476b3cacd8e\\scratch\\RESTART_SHIBASS_SOUND.cmd",
+            "fileType": ".cmd",
+            "linesAdded": 25,
+            "linesRemoved": 0,
+            "projectName": "scratch",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "cmd"
+          }
+        ]
+      },
+      "languageStats": {
+        "cmd": 1
+      },
+      "changeFrequency": {
+        "23": 1
+      },
+      "topFiles": [
+        "c:\\Users\\shibass\\.gemini\\antigravity-ide\\brain\\6da6064e-f9b9-41d7-a094-3476b3cacd8e\\scratch\\RESTART_SHIBASS_SOUND.cmd"
+      ],
+      "averageChangeSize": 13
+    }
+  },
+  "totalActiveTime": 1,
+  "totalProjects": 1,
+  "totalFiles": 1,
+  "mostActiveHours": [
+    23
+  ],
+  "mostUsedLanguages": [
+    "cmd"
+  ]
+}
