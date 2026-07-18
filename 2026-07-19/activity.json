@@ -47,6 +47,98 @@
         "c:\\Users\\shibass\\.gemini\\antigravity-ide\\brain\\6da6064e-f9b9-41d7-a094-3476b3cacd8e\\scratch\\RESTART_SHIBASS_SOUND.cmd"
       ],
       "averageChangeSize": 13
+    },
+    "shibass-ai": {
+      "totalLinesAdded": 146,
+      "totalLinesRemoved": 2,
+      "totalActiveTime": 5,
+      "files": {
+        "c:\\Users\\shibass\\.gemini\\antigravity-ide\\brain\\eea13d4f-dabf-4b6d-be33-3a06d76641fb\\scratch\\inspect_shortcuts.ps1": [
+          {
+            "timestamp": "2026-07-18T22:43:41.823Z",
+            "fileName": "c:\\Users\\shibass\\.gemini\\antigravity-ide\\brain\\eea13d4f-dabf-4b6d-be33-3a06d76641fb\\scratch\\inspect_shortcuts.ps1",
+            "fileType": ".ps1",
+            "linesAdded": 21,
+            "linesRemoved": 0,
+            "projectName": "shibass-ai",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 0,
+            "language": "ps1"
+          },
+          {
+            "timestamp": "2026-07-18T22:43:49.461Z",
+            "fileName": "c:\\Users\\shibass\\.gemini\\antigravity-ide\\brain\\eea13d4f-dabf-4b6d-be33-3a06d76641fb\\scratch\\inspect_shortcuts.ps1",
+            "fileType": ".ps1",
+            "linesAdded": 3,
+            "linesRemoved": 0,
+            "projectName": "shibass-ai",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "ps1"
+          }
+        ],
+        "h:\\shibass-ai\\ShiBass-ONE-FINAL-7.0.0\\core\\Test-System.ps1": [
+          {
+            "timestamp": "2026-07-18T22:45:14.775Z",
+            "fileName": "h:\\shibass-ai\\ShiBass-ONE-FINAL-7.0.0\\core\\Test-System.ps1",
+            "fileType": ".ps1",
+            "linesAdded": 120,
+            "linesRemoved": 0,
+            "projectName": "shibass-ai",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 2,
+            "language": "ps1"
+          },
+          {
+            "timestamp": "2026-07-18T22:45:28.826Z",
+            "fileName": "h:\\shibass-ai\\ShiBass-ONE-FINAL-7.0.0\\core\\Test-System.ps1",
+            "fileType": ".ps1",
+            "linesAdded": 0,
+            "linesRemoved": 2,
+            "projectName": "shibass-ai",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "ps1"
+          },
+          {
+            "timestamp": "2026-07-18T22:45:32.159Z",
+            "fileName": "h:\\shibass-ai\\ShiBass-ONE-FINAL-7.0.0\\core\\Test-System.ps1",
+            "fileType": ".ps1",
+            "linesAdded": 2,
+            "linesRemoved": 0,
+            "projectName": "shibass-ai",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 1,
+            "language": "ps1"
+          }
+        ]
+      },
+      "languageStats": {
+        "ps1": 5
+      },
+      "changeFrequency": {
+        "1": 5
+      },
+      "topFiles": [
+        "h:\\shibass-ai\\ShiBass-ONE-FINAL-7.0.0\\core\\Test-System.ps1",
+        "c:\\Users\\shibass\\.gemini\\antigravity-ide\\brain\\eea13d4f-dabf-4b6d-be33-3a06d76641fb\\scratch\\inspect_shortcuts.ps1"
+      ],
+      "averageChangeSize": 29.6
     }
   },
   "totalActiveTime": 1,
