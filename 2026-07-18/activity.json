@@ -1,0 +1,61 @@
+{
+  "date": "2026-07-18",
+  "projects": {
+    "shibass-ai": {
+      "totalLinesAdded": 40,
+      "totalLinesRemoved": 34,
+      "totalActiveTime": 2,
+      "files": {
+        "h:\\shibass-ai\\INSTALL-CLAUDE-DESKTOP.bat": [
+          {
+            "timestamp": "2026-07-18T00:14:40.398Z",
+            "fileName": "h:\\shibass-ai\\INSTALL-CLAUDE-DESKTOP.bat",
+            "fileType": ".bat",
+            "linesAdded": 40,
+            "linesRemoved": 0,
+            "projectName": "shibass-ai",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 0,
+            "language": "bat"
+          },
+          {
+            "timestamp": "2026-07-18T00:16:20.136Z",
+            "fileName": "h:\\shibass-ai\\INSTALL-CLAUDE-DESKTOP.bat",
+            "fileType": ".bat",
+            "linesAdded": 0,
+            "linesRemoved": 34,
+            "projectName": "shibass-ai",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 2,
+            "language": "bat"
+          }
+        ]
+      },
+      "languageStats": {
+        "bat": 2
+      },
+      "changeFrequency": {
+        "3": 2
+      },
+      "topFiles": [
+        "h:\\shibass-ai\\INSTALL-CLAUDE-DESKTOP.bat"
+      ],
+      "averageChangeSize": 37
+    }
+  },
+  "totalActiveTime": 2,
+  "totalProjects": 1,
+  "totalFiles": 1,
+  "mostActiveHours": [
+    3
+  ],
+  "mostUsedLanguages": [
+    "bat"
+  ]
+}
