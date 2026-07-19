@@ -139,6 +139,39 @@
         "c:\\Users\\shibass\\.gemini\\antigravity-ide\\brain\\eea13d4f-dabf-4b6d-be33-3a06d76641fb\\scratch\\inspect_shortcuts.ps1"
       ],
       "averageChangeSize": 29.6
+    },
+    "User": {
+      "totalLinesAdded": 9,
+      "totalLinesRemoved": 0,
+      "totalActiveTime": 0,
+      "files": {
+        "c:\\Users\\shibass\\AppData\\Roaming\\Antigravity IDE\\User\\settings.json": [
+          {
+            "timestamp": "2026-07-19T03:55:42.858Z",
+            "fileName": "c:\\Users\\shibass\\AppData\\Roaming\\Antigravity IDE\\User\\settings.json",
+            "fileType": ".json",
+            "linesAdded": 9,
+            "linesRemoved": 0,
+            "projectName": "User",
+            "content": {
+              "added": [],
+              "removed": []
+            },
+            "duration": 0,
+            "language": "json"
+          }
+        ]
+      },
+      "languageStats": {
+        "json": 0
+      },
+      "changeFrequency": {
+        "6": 0
+      },
+      "topFiles": [
+        "c:\\Users\\shibass\\AppData\\Roaming\\Antigravity IDE\\User\\settings.json"
+      ],
+      "averageChangeSize": 9
     }
   },
   "totalActiveTime": 1,
