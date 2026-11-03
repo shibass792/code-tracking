@@ -12,15 +12,18 @@ if (-not (Test-Path C:\ShiBass_Voice\make-video.py)) { Write-Host "Download fail
 & $py -m pip install --quiet --no-deps python-bidi pymupdf
 # Brand images: download them from Google Drive (one by one) - this picks them up from Downloads
 $dl = Join-Path $HOME "Downloads"
-$pick = @(@("*14.07.55 b*.png", "avatar.png"), @("shaulshelach*.png", "portrait.png"), @("ShiBass*.pdf", "logo.pdf"))
+$pick = @(@("shibass-avatar*.png", "avatar.png"), @("*14.07.55 b*.png", "avatar.png"), @("shibass-portrait*.png", "portrait.png"), @("shaulshelach*.png", "portrait.png"), @("shibass-logo*.png", "logo.png"), @("ShiBass*.pdf", "logo.pdf"))
+$done = @{}
 foreach ($p in $pick) {
+  if ($done[$p[1]] -or ($p[1] -eq "logo.pdf" -and $done["logo.png"])) { continue }
   $f = Get-ChildItem $dl -Filter $p[0] -ErrorAction SilentlyContinue | Sort-Object LastWriteTime -Descending | Select-Object -First 1
   if ($f) {
-    Copy-Item $f.FullName ("C:\ShiBass_Voice\" + $p[1]) -Force
+    Copy-Item $f.FullName ("C:\ShiBass_Voice\" + $p[1]) -Force; $done[$p[1]] = 1
     Write-Host ("  found " + $f.Name + " -> " + $p[1]) -ForegroundColor Green
     if ($p[1] -eq "avatar.png") { Set-Content -Encoding ASCII C:\ShiBass_Voice\avatar.json '{"mouth_frac":[0.416,0.4198,0.4892]}' }
-  } elseif (-not (Test-Path ("C:\ShiBass_Voice\" + $p[1]))) { Write-Host ("  not in Downloads: " + $p[0]) -ForegroundColor Yellow }
+  }
 }
+foreach ($n in "avatar.png", "portrait.png") { if (-not (Test-Path "C:\ShiBass_Voice\$n")) { Write-Host "  missing $n - download it from the ShiBass Video Assets page" -ForegroundColor Yellow } }
 Write-Host "[2/4] Lessons" -ForegroundColor Cyan
 $n = (Get-ChildItem $dir -Filter *.txt -ErrorAction SilentlyContinue).Count
 Write-Host "  $n lessons in $dir"
