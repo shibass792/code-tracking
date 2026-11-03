@@ -158,14 +158,19 @@ def gradient_bg():
     return Image.fromarray(img, "RGB")
 
 
-def make_slide(course, title, para, idx, total):
+def make_slide(course, title, para, idx, total, daw=True):
     img = gradient_bg()
     d = ImageDraw.Draw(img)
-    d.rounded_rectangle((90, 70, W - 90, 150), 22, fill=(21, 25, 34))
-    f_small, f_title, f_body = font(34), font(64), font(54)
-    d.text((W - 130, 110), rtl(f"{course}  ·  {title}"), font=f_small, fill=(152, 161, 179), anchor="rm")
-    d.text((130, 110), f"{idx}/{total}", font=f_small, fill=(152, 161, 179), anchor="lm")
+    d.rounded_rectangle((90, 50, W - 90, 120), 22, fill=(21, 25, 34))
+    f_small, f_title, f_body = font(32), font(54 if daw else 64), font(54)
+    d.text((W - 130, 85), rtl(f"{course}  \u00b7  {title}"), font=f_small, fill=(152, 161, 179), anchor="rm")
+    d.text((130, 85), f"{idx}/{total}", font=f_small, fill=(152, 161, 179), anchor="lm")
     first = re.split(r"(?<=[.!?:])\s+", para)[0]
+    if daw:
+        lines = wrap(first, f_title, W - 260, d)
+        line = lines[0] + (" ..." if len(lines) > 1 else "")
+        d.text((W - 110, 150), rtl(line), font=f_title, fill=(233, 236, 243), anchor="ra")
+        return img
     lines = wrap(first, f_title, W - 520, d)[:3]
     y = 330
     for ln in lines:
@@ -283,6 +288,101 @@ class Avatar:
         return canvas
 
 
+
+# ------------------------------------------------------------------ animated DAW screen
+DAW_W, DAW_H = W - 180, 422
+BPM = 140
+KIND_WORDS = [("velocity", ("ולוסיטי", "עוצמה", "velocity", "humaniz")),
+              ("pocket", ("קוונטייז", "כיס", "מוקדם", "מאוחר", "pocket", "quantiz")),
+              ("kick", ("קיק", "kick")),
+              ("length", ("אורך", "קצר", "ארוך", "length", "space")),
+              ("notes", ("שורש", "קווינט", "אוקטב", "notes")),
+              ("robot", ("רובוט", "robot"))]
+
+
+def daw_kind(text, default="robot"):
+    low = text.lower()
+    for k, words in KIND_WORDS:
+        if any(w in low for w in words):
+            return k
+    return default
+
+
+def _pattern(kind, variant):
+    """notes: (step, length, row, velocity, offset). 32 steps = 2 bars of 16ths. row 0..4 (4 = root)."""
+    rnd = np.random.RandomState(7 + variant)
+    notes, label = [], ""
+    for beat in range(8):
+        for sub in (1, 2, 3):
+            st = beat * 4 + sub
+            row, vel, off, ln = 4, 1.0, 0.0, 0.8
+            if kind == "notes":
+                row = [4, 4, 1, 4, 4, 0, 4, 2][beat] if sub == 3 else 4
+            if kind in ("robot", "velocity"):
+                if variant % 2:
+                    vel = (1.0 if sub == 1 else 0.55) - 0.15 * rnd.rand()
+                    off = (rnd.rand() - 0.5) * 0.25
+            if kind == "pocket":
+                off = [-0.3, 0.0, 0.3][variant % 3]
+            if kind == "length":
+                ln = 0.35 if variant % 2 == 0 else 1.0
+            notes.append((st, ln, row, vel, off))
+    label = {"robot": ["ROBOT  (100% grid, same velocity)", "HUMAN  (accents + feel)"],
+             "velocity": ["FLAT VELOCITY", "ACCENTED + HUMANIZED"],
+             "pocket": ["EARLY  (pushing)", "ON THE GRID", "LATE  (laid back)"],
+             "kick": ["KICK + ROLLING BASS"],
+             "length": ["SHORT NOTES  (tight)", "LONG NOTES  (full)"],
+             "notes": ["ROOT  /  5TH  /  OCTAVE"]}[kind]
+    return notes, label[variant % len(label)]
+
+
+def daw_frame(kind, t):
+    step_t = 60.0 / BPM / 4
+    loop = 32 * step_t
+    variant = int(t // loop)
+    pos = (t % loop) / step_t  # playhead in steps
+    notes, label = _pattern(kind, variant)
+    im = Image.new("RGBA", (DAW_W, DAW_H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    d.rounded_rectangle((0, 0, DAW_W - 1, DAW_H - 1), 22, fill=(16, 19, 27, 245), outline=(44, 50, 66), width=2)
+    gx0, gx1 = 190, DAW_W - 24
+    sw = (gx1 - gx0) / 32
+    fs = font(26)
+    d.text((24, 22), "SHIBASS  DAW", font=fs, fill=(110, 118, 140))
+    d.text((DAW_W - 24, 22), label, font=fs, fill=ACC2, anchor="ra")
+    lanes = {"KICK": (64, 114), "BASS": (130, 330), "VEL": (346, 412)}
+    rows = ["OCT", "", "5TH", "", "ROOT"] if kind == "notes" else ["", "", "", "", ""]
+    for name, (y0, y1) in lanes.items():
+        d.rectangle((gx0, y0, gx1, y1), fill=(22, 26, 37))
+        d.text((24, (y0 + y1) // 2), name, font=fs, fill=(150, 158, 178), anchor="lm")
+    for i, r in enumerate(rows):
+        if r:
+            d.text((120, 130 + i * 40 + 20), r, font=font(20), fill=(120, 128, 150), anchor="lm")
+    for k in range(33):
+        x = gx0 + k * sw
+        col = (70, 78, 100) if k % 4 == 0 else (34, 39, 54)
+        if k % 16 == 0:
+            col = (110, 118, 145)
+        d.line((x, 64, x, 412), fill=col, width=2 if k % 4 == 0 else 1)
+    # kick on every beat
+    for beat in range(8):
+        x = gx0 + beat * 4 * sw
+        on = 0 <= pos - beat * 4 < 1.2
+        d.rounded_rectangle((x + 3, 72, x + sw - 3, 106), 6, fill=(255, 255, 255) if on else ACC)
+    for st, ln, row, vel, off in notes:
+        x0 = gx0 + (st + off) * sw
+        x1 = x0 + max(ln * sw - 4, 6)
+        y0 = 130 + row * 40 + 4
+        on = 0 <= pos - (st + off) < max(ln, 0.6)
+        c = tuple(int(v * (0.45 + 0.55 * vel)) for v in ACC2)
+        d.rounded_rectangle((x0 + 2, y0, x1, y0 + 32), 6, fill=(255, 255, 255) if on else c)
+        h = int(60 * vel)
+        d.rectangle((x0 + 4, 410 - h, x0 + 12, 410), fill=(255, 255, 255) if on else c)
+    px = gx0 + pos * sw
+    d.line((px, 56, px, 418), fill=(255, 93, 108), width=4)
+    d.polygon([(px - 10, 50), (px + 10, 50), (px, 64)], fill=(255, 93, 108))
+    return im
+
 # ------------------------------------------------------------------ render
 def screen_reader(ff, path, n_frames):
     p = subprocess.Popen([ff, "-v", "error", "-stream_loop", "0", "-i", str(path), "-vf",
@@ -297,7 +397,7 @@ def screen_reader(ff, path, n_frames):
     p.kill()
 
 
-def render(txt, wav, out, course="ShiBass", screen=None, logo=None, intro=4.0):
+def render(txt, wav, out, course="ShiBass", screen=None, logo=None, intro=4.0, daw=True):
     ff = ffmpeg_bin()
     title, paras = parse_lesson(txt)
     audio, sr = load_audio(wav, ff)
@@ -306,7 +406,9 @@ def render(txt, wav, out, course="ShiBass", screen=None, logo=None, intro=4.0):
     n = int(total * FPS)
     level = np.concatenate([np.zeros(int(intro * FPS)), loudness_per_frame(audio, sr, n - int(intro * FPS))])
     slides, subs = build_timeline(paras, dur)
-    slide_imgs = [np.asarray(make_slide(course, title, p, i + 1, len(slides))) for i, (_, _, p) in enumerate(slides)]
+    slide_imgs = [np.asarray(make_slide(course, title, p, i + 1, len(slides), daw)) for i, (_, _, p) in enumerate(slides)]
+    lesson_kind = daw_kind(Path(txt).stem.replace("-", " "))
+    kinds = [daw_kind(p, lesson_kind) for _, _, p in slides]
     title_img = np.asarray(make_title_card(course, title))
     sub_imgs = [subtitle_layer(s) for _, _, s in subs]
     av = Avatar(logo)
@@ -324,6 +426,7 @@ def render(txt, wav, out, course="ShiBass", screen=None, logo=None, intro=4.0):
     for f in range(n):
         t = f / FPS
         ta = t - intro
+        daw_k = None
         if ta < 0:
             base = title_img
         else:
@@ -334,7 +437,11 @@ def render(txt, wav, out, course="ShiBass", screen=None, logo=None, intro=4.0):
                 scr = None
                 k = next((i for i, (a, b, _) in enumerate(slides) if a <= ta < b), len(slides) - 1)
                 base = slide_imgs[k]
+                daw_k = k
         img = Image.fromarray(base, "RGB").convert("RGBA")
+        if daw and daw_k is not None:
+            img.alpha_composite(daw_frame(kinds[daw_k], ta - slides[daw_k][0]), (90, 236))
+            daw_k = None
         if ta >= 0:
             while si < len(subs) - 1 and ta >= subs[si][1]:
                 si += 1

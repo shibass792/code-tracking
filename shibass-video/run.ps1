@@ -1,3 +1,4 @@
+param([switch]$Redo)
 # ShiBass lesson videos - one command. Downloads make-video.py, then: audio in your voice -> videos. ASCII-only.
 $py  = "C:\venvs\chatterbox\Scripts\python.exe"
 $dir = "C:\ShiBass_Voice\courses\groove"; $aud = "${dir}_audio"; $scr = "${dir}_screen"; $vid = "${dir}_video"
@@ -18,6 +19,6 @@ $v = @("C:\ShiBass_Voice\whatsapp.ogg","C:\ShiBass_Voice\voice-B.flac","C:\ShiBa
 if ($v -and (Test-Path C:\ShiBass_Voice\he-batch.py)) { & $py C:\ShiBass_Voice\he-batch.py $v --in $dir --out $aud --base male "--rate=-5%" --pause 0.15 }
 else { Write-Host "  voice file or he-batch.py missing - using existing audio only" -ForegroundColor Yellow }
 Write-Host "[4/4] Videos" -ForegroundColor Cyan
-& $py C:\ShiBass_Voice\make-video.py --course $dir
+if ($Redo) { & $py C:\ShiBass_Voice\make-video.py --course $dir --redo } else { & $py C:\ShiBass_Voice\make-video.py --course $dir }
 Write-Host "DONE. Videos: $vid" -ForegroundColor Green
 explorer $vid
