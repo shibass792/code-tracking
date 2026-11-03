@@ -163,8 +163,16 @@ def make_slide(course, title, para, idx, total, daw=True):
     d = ImageDraw.Draw(img)
     d.rounded_rectangle((90, 50, W - 90, 120), 22, fill=(21, 25, 34))
     f_small, f_title, f_body = font(32), font(54 if daw else 64), font(54)
-    d.text((W - 130, 85), rtl(f"{course}  \u00b7  {title}"), font=f_small, fill=(152, 161, 179), anchor="rm")
-    d.text((130, 85), f"{idx}/{total}", font=f_small, fill=(152, 161, 179), anchor="lm")
+    head = title if asset("logo.png") is not None else f"{course}  \u00b7  {title}"
+    d.text((W - 130, 85), rtl(head), font=f_small, fill=(152, 161, 179), anchor="rm")
+    lg = asset("logo.png")
+    if lg is not None:
+        lg = lg.copy()
+        lg.thumbnail((220, 46))
+        img.paste(lg, (124, 85 - lg.height // 2), lg)
+        d.text((124 + lg.width + 24, 85), f"{idx}/{total}", font=f_small, fill=(152, 161, 179), anchor="lm")
+    else:
+        d.text((130, 85), f"{idx}/{total}", font=f_small, fill=(152, 161, 179), anchor="lm")
     first = re.split(r"(?<=[.!?:])\s+", para)[0]
     if daw:
         lines = wrap(first, f_title, W - 260, d)
@@ -187,7 +195,67 @@ def make_slide(course, title, para, idx, total, daw=True):
     return img
 
 
+ASSETS = {}
+
+
+def asset(name):
+    """Optional brand images next to the avatar: logo.png, portrait.png (C:\\ShiBass_Voice)."""
+    if name not in ASSETS:
+        p = Path(ASSETS.get("_dir", ".")) / name
+        im = Image.open(p).convert("RGBA") if p.exists() else None
+        pdf = p.with_suffix(".pdf")
+        if im is None and name == "logo.png" and pdf.exists():
+            try:
+                try:
+                    import pymupdf as fitz
+                except ImportError:
+                    import fitz
+                pix = fitz.open(str(pdf))[0].get_pixmap(dpi=300)
+                im = Image.frombytes("RGB", (pix.width, pix.height), pix.samples).convert("RGBA")
+            except Exception as e:
+                print(f"  (logo.pdf not readable: {e})")
+        if im is not None and name == "logo.png" and np.asarray(im.getchannel("A")).min() > 250:
+            # dark logo on white background -> white logo on transparent
+            g = np.asarray(im.convert("L")).astype(float)
+            a = Image.fromarray(np.clip((235 - g) * 1.6, 0, 255).astype(np.uint8))
+            im = Image.new("RGBA", im.size, (255, 255, 255, 0))
+            im.putalpha(a)
+            im = im.crop(im.getbbox())
+        ASSETS[name] = im
+    return ASSETS[name]
+
+
 def make_title_card(course, title):
+    logo, por = asset("logo.png"), asset("portrait.png")
+    if logo is not None or por is not None:
+        img = gradient_bg().convert("RGBA")
+        d = ImageDraw.Draw(img)
+        cx = W // 2 + (230 if por is not None else 0)
+        if por is not None:
+            p = por.copy()
+            p.thumbnail((760, 900))
+            glow = Image.new("RGBA", img.size, (0, 0, 0, 0))
+            g = Image.new("RGBA", p.size, (*ACC, 0))
+            g.putalpha(p.getchannel("A").point(lambda a: a // 2))
+            glow.alpha_composite(g, (120, H - p.height))
+            img.alpha_composite(glow.filter(ImageFilter.GaussianBlur(30)))
+            img.alpha_composite(p, (120, H - p.height))
+        y = H // 2 - 170
+        if logo is not None:
+            lg = logo.copy()
+            lg.thumbnail((640, 160))
+            img.alpha_composite(lg, (cx - lg.width // 2, y - lg.height // 2))
+            y += lg.height // 2 + 40
+        else:
+            d.text((cx, y), rtl(course), font=font(48), fill=ACC2, anchor="mm")
+            y += 60
+        d.text((cx, y + 70), rtl(title), font=font(84), fill=(240, 242, 248), anchor="mm")
+        d.rectangle((cx - 140, y + 140, cx + 140, y + 148), fill=ACC)
+        return img.convert("RGB")
+    return _plain_title_card(course, title)
+
+
+def _plain_title_card(course, title):
     img = gradient_bg()
     d = ImageDraw.Draw(img)
     d.text((W // 2, H // 2 - 70), rtl(course), font=font(48), fill=ACC2, anchor="mm")
@@ -277,18 +345,49 @@ class Avatar:
             alpha = np.asarray(im.getchannel("A"))
             if (alpha < 250).mean() > 0.05:  # has real transparency
                 im = im.crop(im.getbbox())
-                im.thumbnail((440, 440))
+                big_h = im.height
+                im.thumbnail((370, 385))
                 self.cutout = im
+                self.mouth = None
+                meta = Path(logo).with_suffix(".json")
+                if meta.exists():
+                    import json
+                    j = json.loads(meta.read_text())
+                    if "mouth_frac" in j:  # fractions of the cropped image: x0, lip-line y, x1
+                        fx0, fy, fx1 = j["mouth_frac"]
+                        self.mouth = [fx0 * im.width, fy * im.height, fx1 * im.width]
+                    else:
+                        k = im.height / big_h
+                        self.mouth = [v * k for v in j["mouth"]]
             else:
                 self.logo = ImageOps.fit(im, (self.S - 24, self.S - 24))
         self.mask = Image.new("L", (self.S, self.S), 0)
         ImageDraw.Draw(self.mask).ellipse((0, 0, self.S - 1, self.S - 1), fill=255)
 
+    def talk(self, im, level):
+        """Jaw-drop lip sync: shift the chin under the lip line down and show a dark mouth gap."""
+        if not self.mouth or level < 0.08:
+            return im
+        x0, y, x1 = self.mouth
+        w = x1 - x0
+        op = max(1, int(round(level * w * 0.28)))
+        bx0, bx1, by1 = int(x0 - w * 0.35), int(x1 + w * 0.35), int(y + w * 1.25)
+        y = int(y)
+        out = im.copy()
+        d = ImageDraw.Draw(out)
+        d.ellipse((x0 + w * 0.08, y - 1, x1 - w * 0.08, y + op * 2), fill=(52, 18, 24, 255))
+        chin = im.crop((bx0, y, bx1, by1))
+        m = Image.new("L", chin.size, 0)
+        ImageDraw.Draw(m).ellipse((0, -chin.height, chin.width - 1, chin.height - 1), fill=255)
+        m = m.filter(ImageFilter.GaussianBlur(max(1, w * 0.08)))
+        out.paste(chin, (bx0, y + op), m)
+        return out
+
     def frame(self, level, t):
         S = self.S
         if self.cutout is not None:
-            c = self.cutout
-            k = 1.0 + 0.06 * level
+            c = self.talk(self.cutout, level)
+            k = 1.0 + 0.04 * level
             im = c.resize((int(c.width * k), int(c.height * (k + 0.02 * level))))
             bob = int(6 * math.sin(t * 2.2)) - int(10 * level)
             canvas = Image.new("RGBA", (500, 520), (0, 0, 0, 0))
@@ -324,7 +423,7 @@ class Avatar:
 
 
 # ------------------------------------------------------------------ animated DAW screen
-DAW_W, DAW_H = W - 180, 422
+DAW_W, DAW_H = W - 180, 404
 BPM = 140
 KIND_WORDS = [("velocity", ("ולוסיטי", "עוצמה", "velocity", "humaniz")),
               ("pocket", ("קוונטייז", "כיס", "מוקדם", "מאוחר", "pocket", "quantiz")),
@@ -384,7 +483,7 @@ def daw_frame(kind, t):
     fs = font(26)
     d.text((24, 22), "SHIBASS  DAW", font=fs, fill=(110, 118, 140))
     d.text((DAW_W - 24, 22), label, font=fs, fill=ACC2, anchor="ra")
-    lanes = {"KICK": (64, 114), "BASS": (130, 330), "VEL": (346, 412)}
+    lanes = {"KICK": (64, 114), "BASS": (130, 330), "VEL": (338, 396)}
     rows = ["OCT", "", "5TH", "", "ROOT"] if kind == "notes" else ["", "", "", "", ""]
     for name, (y0, y1) in lanes.items():
         d.rectangle((gx0, y0, gx1, y1), fill=(22, 26, 37))
@@ -397,7 +496,7 @@ def daw_frame(kind, t):
         col = (70, 78, 100) if k % 4 == 0 else (34, 39, 54)
         if k % 16 == 0:
             col = (110, 118, 145)
-        d.line((x, 64, x, 412), fill=col, width=2 if k % 4 == 0 else 1)
+        d.line((x, 64, x, 396), fill=col, width=2 if k % 4 == 0 else 1)
     # kick on every beat
     for beat in range(8):
         x = gx0 + beat * 4 * sw
@@ -410,10 +509,10 @@ def daw_frame(kind, t):
         on = 0 <= pos - (st + off) < max(ln, 0.6)
         c = tuple(int(v * (0.45 + 0.55 * vel)) for v in ACC2)
         d.rounded_rectangle((x0 + 2, y0, x1, y0 + 32), 6, fill=(255, 255, 255) if on else c)
-        h = int(60 * vel)
-        d.rectangle((x0 + 4, 410 - h, x0 + 12, 410), fill=(255, 255, 255) if on else c)
+        h = int(52 * vel)
+        d.rectangle((x0 + 4, 394 - h, x0 + 12, 394), fill=(255, 255, 255) if on else c)
     px = gx0 + pos * sw
-    d.line((px, 56, px, 418), fill=(255, 93, 108), width=4)
+    d.line((px, 56, px, 400), fill=(255, 93, 108), width=4)
     d.polygon([(px - 10, 50), (px + 10, 50), (px, 64)], fill=(255, 93, 108))
     return im
 
@@ -480,8 +579,9 @@ def render(txt, wav, out, course="ShiBass", screen=None, logo=None, intro=4.0, d
             while si < len(subs) - 1 and ta >= subs[si][1]:
                 si += 1
             img.alpha_composite(sub_imgs[si], (0, H - 300))
-        a = av.frame(float(level[f]) if f < len(level) else 0.0, t)
-        img.alpha_composite(a, (40, H - a.height - 30))
+        if ta >= 0 or asset("portrait.png") is None:
+            a = av.frame(float(level[f]) if f < len(level) else 0.0, t)
+            img.alpha_composite(a, (40, H - a.height - 30))
         enc.stdin.write(img.convert("RGB").tobytes())
         if f % (FPS * 15) == 0 and f:
             done = f / n
@@ -502,6 +602,7 @@ def main():
     ap.add_argument("--out", help="output mp4 (single lesson)")
     ap.add_argument("--redo", action="store_true")
     a = ap.parse_args()
+    ASSETS["_dir"] = str(Path(a.avatar).parent) if a.avatar and a.avatar != "none" else "."
 
     if a.course:
         c = Path(a.course)
