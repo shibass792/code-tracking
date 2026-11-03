@@ -213,6 +213,58 @@ def subtitle_layer(text):
     return tmp
 
 
+
+def shibass_dj(level, t, S):
+    """Drawn ShiBass: bearded DJ with a bun, sunglasses and headphones. Mouth follows the voice."""
+    k = 2  # draw at 2x, downscale for smooth edges
+    Z = S * k
+    im = Image.new("RGBA", (Z, Z), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    bob = int(5 * k * math.sin(t * 2.2)) - int(6 * k * level)
+    cx = Z // 2
+    skin, skin_d = (196, 140, 104), (170, 116, 84)
+    hair, beard = (34, 28, 26), (62, 48, 40)
+    # shoulders + white tee
+    d.ellipse((cx - 300, Z - 190, cx + 300, Z + 260), fill=(236, 238, 242))
+    d.polygon([(cx - 60, Z - 175), (cx + 60, Z - 175), (cx, Z - 110)], fill=skin_d)  # neckline
+    d.text((cx, Z - 70), "SHIBASS", font=font(44), fill=(40, 44, 60), anchor="mm")
+    # neck
+    d.rectangle((cx - 52, Z - 260 + bob // 2, cx + 52, Z - 170), fill=skin_d)
+    y = 120 + bob  # head top
+    # bun + hair
+    d.ellipse((cx - 46, y - 70, cx + 46, y + 14), fill=hair)
+    d.ellipse((cx - 150, y, cx + 150, y + 200), fill=hair)
+    # head
+    d.ellipse((cx - 140, y + 30, cx + 140, y + 360), fill=skin)
+    d.ellipse((cx - 160, y + 170, cx - 118, y + 240), fill=skin_d)  # ears
+    d.ellipse((cx + 118, y + 170, cx + 160, y + 240), fill=skin_d)
+    d.pieslice((cx - 142, y + 20, cx + 142, y + 200), 180, 360, fill=hair)  # hairline
+    # beard
+    d.chord((cx - 136, y + 150, cx + 136, y + 386), 0, 180, fill=beard)
+    # mouth (opens with the voice) + mustache
+    mh = int(8 + 46 * level)
+    d.rounded_rectangle((cx - 42, y + 292, cx + 42, y + 292 + mh), 16, fill=(60, 22, 26))
+    if mh > 24:
+        d.rectangle((cx - 30, y + 294, cx + 30, y + 302), fill=(240, 240, 240))  # teeth
+    d.chord((cx - 70, y + 255, cx + 70, y + 310), 180, 360, fill=hair)
+    d.ellipse((cx - 14, y + 228, cx + 14, y + 262), fill=skin_d)  # nose
+    # sunglasses (with a reflection that drifts)
+    for sx in (-1, 1):
+        x0 = cx + sx * 74
+        d.rounded_rectangle((x0 - 62, y + 168, x0 + 62, y + 232), 26, fill=(18, 20, 28))
+        rx = x0 - 40 + int(20 * math.sin(t * 0.7))
+        d.line((rx, y + 182, rx + 26, y + 182), fill=(110, 120, 150), width=6)
+    d.line((cx - 14, y + 186, cx + 14, y + 186), fill=(18, 20, 28), width=10)
+    # headphones
+    d.arc((cx - 176, y - 10, cx + 176, y + 330), 190, 350, fill=(30, 32, 44), width=26)
+    d.arc((cx - 176, y - 10, cx + 176, y + 330), 200, 340, fill=ACC2, width=10)
+    for sx in (-1, 1):
+        x0 = cx + sx * 160
+        d.rounded_rectangle((x0 - 34, y + 150, x0 + 34, y + 270), 22, fill=(30, 32, 44))
+        d.rounded_rectangle((x0 - 22, y + 166, x0 + 22, y + 254), 14, fill=ACC2 if level < 0.5 else (255, 255, 255))
+    return im.resize((S, S), Image.LANCZOS)
+
+
 class Avatar:
     """ShiBass talking character (default) or a user logo that pulses with the voice."""
     S = 340
@@ -260,25 +312,7 @@ class Avatar:
             ImageDraw.Draw(m).ellipse((ring - 12, ring - 12, lg.width - ring + 12, lg.height - ring + 12), fill=255)
             im.paste(lg, ((S - lg.width) // 2, (S - lg.height) // 2), m)
         else:
-            cx, cy = S // 2, S // 2 + 6
-            bob = int(4 * math.sin(t * 2.2))
-            d.ellipse((cx - 120, cy - 128 + bob, cx + 120, cy + 112 + bob), fill=(46, 52, 72))
-            d.arc((cx - 132, cy - 150 + bob, cx + 132, cy + 40 + bob), 200, 340, fill=ACC2, width=14)  # headphones
-            d.rounded_rectangle((cx - 150, cy - 40 + bob, cx - 112, cy + 40 + bob), 12, fill=ACC2)
-            d.rounded_rectangle((cx + 112, cy - 40 + bob, cx + 150, cy + 40 + bob), 12, fill=ACC2)
-            blink = (t % 4.1) < 0.12
-            for ex in (-46, 46):
-                if blink:
-                    d.line((cx + ex - 16, cy - 30 + bob, cx + ex + 16, cy - 30 + bob), fill=(235, 238, 245), width=6)
-                else:
-                    d.ellipse((cx + ex - 16, cy - 46 + bob, cx + ex + 16, cy - 14 + bob), fill=(235, 238, 245))
-                    d.ellipse((cx + ex - 6, cy - 36 + bob, cx + ex + 6, cy - 24 + bob), fill=(20, 22, 30))
-            mh = 6 + int(46 * level)
-            d.rounded_rectangle((cx - 44, cy + 34 + bob, cx + 44, cy + 34 + mh + bob), min(22, mh // 2 + 3),
-                                fill=(20, 22, 30))
-            if mh > 20:
-                d.rounded_rectangle((cx - 28, cy + 34 + mh - 12 + bob, cx + 28, cy + 34 + mh + bob), 8,
-                                    fill=(255, 93, 108))
+            im.alpha_composite(shibass_dj(level, t, S), (0, 0))
         out = Image.new("RGBA", (S, S), (0, 0, 0, 0))
         out.paste(im, (0, 0), self.mask)
         glow = out.filter(ImageFilter.GaussianBlur(10 + 18 * level))
